@@ -1,7 +1,7 @@
 <?php
 include "inc/inc.koneksi.php";
 function anti_injection($data){
-  $filter = mysql_real_escape_string(stripslashes(strip_tags(htmlspecialchars($data,ENT_QUOTES))));
+  $filter = mysqli_real_escape_string(stripslashes(strip_tags(htmlspecialchars($data,ENT_QUOTES))));
   return $filter;
 }
 $username	= anti_injection($_POST[username]);
@@ -14,7 +14,7 @@ if (!ctype_alnum($username) OR !ctype_alnum($pass)){
 </script>
 <?php
 }else{
-	$login	=mysql_query("SELECT * FROM users WHERE user_id='$username' AND password='$pass'");
+	$login	=mysqli_query("SELECT * FROM users WHERE user_id='$username' AND password='$pass'");
 	$ketemu	=mysql_num_rows($login);
 	if ($ketemu > 0){
 		session_start();
