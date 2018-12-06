@@ -1,11 +1,13 @@
 <?php
 include "inc/inc.koneksi.php";
-function anti_injection($data){
-  $filter = mysql_real_escape_string(stripslashes(strip_tags(htmlspecialchars($data,ENT_QUOTES))));
-  return $filter;
-}
-$username	= anti_injection($_POST[username]);
-$pass		= anti_injection(md5($_POST[password]));
+// function anti_injection($data){
+//   $filter = mysql_real_escape_string(stripslashes(strip_tags(htmlspecialchars($data,ENT_QUOTES))));
+//   return $filter;
+// }
+// $username	= anti_injection($_POST['username']);
+// $pass		= anti_injection(md5($_POST[password]));
+$username	=$_POST['username'];
+$pass		= $_POST['password'];
 if (!ctype_alnum($username) OR !ctype_alnum($pass)){
 ?>
 <script>
@@ -14,7 +16,8 @@ if (!ctype_alnum($username) OR !ctype_alnum($pass)){
 </script>
 <?php
 }else{
-	$login	=mysql_query("SELECT * FROM users WHERE user_id='$username' AND password='$pass'");
+  $query =("SELECT * FROM users WHERE user_id='$username' AND password='$pass'");
+	$login	=$query;
 	$ketemu	=mysql_num_rows($login);
 	if ($ketemu > 0){
 		session_start();
