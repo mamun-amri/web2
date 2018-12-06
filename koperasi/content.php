@@ -3,7 +3,7 @@ include "inc/inc.koneksi.php";
 $mod = $_GET['module'];
 if ($mod=='home'){
 	echo "<h2>Selamat Datang</h2>";
-	echo "Hai, <b>$_SESSION[namauser] </b> Selamat datang  di Sistem Informasi Koperasi";	
+	echo "Hai, <b>$_SESSION[namauser] </b> Selamat datang  di Sistem Informasi Koperasi";
 }
 elseif ($mod=='jenis'){
     include "modul/jenis/jenis.php";

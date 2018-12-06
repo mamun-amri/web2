@@ -1,5 +1,5 @@
 <ul class="sf-menu">
-<li><a href="?module=home">Home</a></li>	
+<li><a href="?module=home">Home</a></li>
 <li>
 <a href="#">Master</a>
 <ul>

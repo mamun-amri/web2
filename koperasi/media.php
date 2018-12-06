@@ -8,7 +8,7 @@ session_start();
 <title>Sistem Informasi Koperasi Simpan Pinjam</title>
 <link rel="stylesheet" href="css/style_content.css" type="text/css"/>
 <link rel="stylesheet" href="css/style_table.css" type="text/css"/>
-<link type="text/css" href="css/excite-bike/jquery-ui-1.8.21.custom.css" rel="stylesheet" />	
+<link type="text/css" href="css/excite-bike/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
 <!-- untuk menu superfish -->

@@ -19,7 +19,7 @@
 		alert("Anda belum mengisikan Username.");
 		$("#username").focus();
 		return false();
-	  }		 
+	  }
 	  if (password.length == 0){
 		alert("Anda belum mengisikan Password.");
 		$("#password").focus();
@@ -33,7 +33,7 @@
 	float:right
 }
 button {margin: 0; padding: 0;}
-button {margin: 2px; position: relative; padding: 4px 4px 4px 2px; 
+button {margin: 2px; position: relative; padding: 4px 4px 4px 2px;
 cursor: pointer; float: left;  list-style: none;}
 button span.ui-icon {float: left; margin: 0 4px;}
 </style>
